@@ -62,7 +62,9 @@ export default function Layout({
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fb3b53f52231b49298967686d64413891"
               alt="세무법인 로고스 로고"
-              className="w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain"
+              className={`w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain transition-all duration-300 ${
+                isScrolled ? "" : "brightness-0 invert"
+              }`}
             />
             <span
               className={`ml-3 text-lg md:text-xl lg:text-2xl font-bold ${
@@ -204,15 +206,6 @@ export default function Layout({
       >
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-slate-800/50 to-slate-700/30"></div>
-
-        {/* Side Scroll Text (Homepage only) */}
-        {isHomepage && (
-          <div className="absolute left-6 top-1/2 transform -translate-y-1/2 rotate-90 origin-center">
-            <span className="text-white/60 text-sm tracking-widest font-light">
-              SCROLL
-            </span>
-          </div>
-        )}
 
         <div className="container mx-auto px-4 relative z-10">
           <div className={`${isHomepage ? "max-w-3xl" : "text-center"}`}>
