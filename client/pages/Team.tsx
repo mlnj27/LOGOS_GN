@@ -52,7 +52,7 @@ const teamMembers: TeamMember[] = [
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
-      "LG전자 가전본부 원가관���",
+      "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템",
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
@@ -83,7 +83,7 @@ const teamMembers: TeamMember[] = [
       "국세청 15년 근무",
       "분당 법인 의정부 재산 등",
       "국세청 15년 근무",
-      "분당 법인 의정�� 재산 등"
+      "분당 법인 의정부 재산 등"
     ]
   }
 ];
@@ -157,14 +157,6 @@ export default function Team() {
                     <span>📧</span>
                     <span>jason@outlook.com</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span>📞</span>
-                    <span>+82 2 540 2153</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span>📠</span>
-                    <span>+82 2 540 2154</span>
-                  </div>
                 </div>
               </div>
 
@@ -187,14 +179,18 @@ export default function Team() {
 
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
-                  <div className="overflow-y-auto max-h-80 scrollbar-hide pr-2">
-                    <div className="space-y-2">
-                      {selectedMember.career.map((item, index) => (
-                        <p key={index} className="text-gray-700 text-sm leading-relaxed">
-                          {item}
-                        </p>
-                      ))}
+                  <div className="relative">
+                    <div className="overflow-y-auto max-h-80 scrollbar-hide pr-2" id="career-scroll-desktop">
+                      <div className="space-y-2">
+                        {selectedMember.career.map((item, index) => (
+                          <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                            {item}
+                          </p>
+                        ))}
+                      </div>
                     </div>
+                    {/* 스크롤 그라데이션 */}
+                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-gradient-desktop"></div>
                   </div>
                 </div>
               </div>
@@ -205,28 +201,23 @@ export default function Team() {
               {/* Top section - Photo and contact info */}
               <div className="p-6 border-b border-gray-200">
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-32 h-40 bg-gray-300 rounded"></div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-32 h-40 bg-gray-300 rounded flex-shrink-0"></div>
+                    <div className="flex flex-col justify-center h-40">
+                      <div className="text-xs text-gray-600">
+                        <div className="flex items-center gap-2">
+                          <span>📧</span>
+                          <span>jason@outlook.com</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <button
                     onClick={() => setSelectedMember(null)}
-                    className="text-gray-400 hover:text-gray-600"
+                    className="text-gray-400 hover:text-gray-600 flex-shrink-0"
                   >
                     <X size={20} />
                   </button>
-                </div>
-                
-                <div className="space-y-1 text-xs text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <span>📧</span>
-                    <span>jason@outlook.com</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span>📞</span>
-                    <span>+82 2 540 2153</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span>📠</span>
-                    <span>+82 2 540 2154</span>
-                  </div>
                 </div>
               </div>
 
@@ -241,14 +232,18 @@ export default function Team() {
 
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 mb-3">경력사항</h3>
-                  <div className="overflow-y-auto flex-1 scrollbar-hide">
-                    <div className="space-y-2">
-                      {selectedMember.career.map((item, index) => (
-                        <p key={index} className="text-gray-700 text-sm leading-relaxed">
-                          {item}
-                        </p>
-                      ))}
+                  <div className="relative flex-1">
+                    <div className="overflow-y-auto h-full scrollbar-hide" id="career-scroll-mobile">
+                      <div className="space-y-2">
+                        {selectedMember.career.map((item, index) => (
+                          <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                            {item}
+                          </p>
+                        ))}
+                      </div>
                     </div>
+                    {/* 스크롤 그라데이션 */}
+                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-gradient-mobile"></div>
                   </div>
                 </div>
               </div>
