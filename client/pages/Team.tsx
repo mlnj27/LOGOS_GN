@@ -13,7 +13,7 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: "yoon",
-    name: "윤영호",
+    name: "윤 영 호",
     position: "대표이사 / 세무사",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2Fae9bf94b741c4098b41114ee1e95224b?format=webp&width=800",
     career: [
@@ -28,8 +28,8 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: "lee",
-    name: "이영섭",
-    position: "고문",
+    name: "이 영 섭",
+    position: "고 문",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F055b524f08ab4509b1e0f627cf76df15?format=webp&width=800",
     career: [
       "스닥상장사 대한뉴팜(주) 대표이사",
@@ -44,8 +44,8 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: "noh",
-    name: "노현철",
-    position: "이사",
+    name: "노 현 철",
+    position: "이 사",
     image: "/placeholder.svg",
     career: [
       "국세청 15년 근무",
@@ -62,7 +62,7 @@ export default function Team() {
       <section className="py-16 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
@@ -70,9 +70,11 @@ export default function Team() {
                   onClick={() => setSelectedMember(member)}
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <button className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded">
-                      로고
-                    </button>
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                      alt="로고"
+                      className="w-12 h-12 object-contain"
+                    />
                   </div>
                   
                   <div className="flex items-center gap-4">
@@ -80,7 +82,7 @@ export default function Team() {
                       <h3 className="font-bold text-lg text-gray-900 mb-1">
                         {member.name}
                       </h3>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-sm" style={{color: '#070D4C'}}>
                         {member.position}
                       </p>
                     </div>
@@ -98,19 +100,21 @@ export default function Team() {
         {/* Modal */}
         {selectedMember && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div className="bg-white rounded-lg shadow-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-              <div className="flex items-start gap-6 p-6">
+            <div className="bg-white rounded-lg shadow-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+              <div className="flex items-start gap-8 p-8">
                 <div className="flex-shrink-0">
-                  <button className="px-3 py-1 bg-gray-200 text-gray-700 text-sm rounded mb-4">
-                    로고
-                  </button>
-                  <div className="w-32 h-40 bg-gray-300 rounded"></div>
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                    alt="로고"
+                    className="w-16 h-16 object-contain mb-4"
+                  />
+                  <div className="w-40 h-52 bg-gray-300 rounded"></div>
                 </div>
                 
                 <div className="flex-1">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h2 className="text-xl font-bold text-gray-900 mb-2">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-3">
                         {selectedMember.name} {selectedMember.position}
                       </h2>
                     </div>
@@ -123,10 +127,10 @@ export default function Team() {
                   </div>
                   
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-3">경력</h3>
+                    <h3 className="font-bold text-gray-900 mb-4 text-lg">경력</h3>
                     <div className="space-y-1">
                       {selectedMember.career.map((item, index) => (
-                        <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                        <p key={index} className="text-gray-700 text-base leading-relaxed">
                           {item}
                         </p>
                       ))}
