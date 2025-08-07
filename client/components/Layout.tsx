@@ -62,7 +62,9 @@ export default function Layout({
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F8517c0d1710c4d3599e60758bbb21b1d%2Fb3b53f52231b49298967686d64413891"
               alt="세무법인 로고스 로고"
-              className="w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain"
+              className={`w-12 h-12 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain transition-all duration-300 ${
+                isScrolled ? "" : "brightness-0 invert"
+              }`}
             />
             <span
               className={`ml-3 text-lg md:text-xl lg:text-2xl font-bold ${
