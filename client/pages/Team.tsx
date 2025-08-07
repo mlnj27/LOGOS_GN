@@ -23,14 +23,14 @@ const teamMembers: TeamMember[] = [
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
-      "서울청 부과세과 팀장 등",
+      "서울청 부과세과 ���장 등",
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
       "국세청 감사관실",
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
-      "서울청 부과세과 팀장 등",
+      "서울청 부과세과 팀��� 등",
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
       "국세청 감사관실",
@@ -54,11 +54,11 @@ const teamMembers: TeamMember[] = [
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템",
-      "스닥상장사 대��뉴팜(주) 대표이사",
+      "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
-      "MBC 전략정보경영시스템 도입을 위한 진단",
+      "MBC 전략정보경영시스템 도입을 위�� 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템",
@@ -237,53 +237,54 @@ export default function Team() {
 
             {/* Mobile Layout */}
             <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm max-h-[85vh] flex flex-col">
-              {/* Top section - Photo and contact info */}
-              <div className="p-6 border-b border-gray-200">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-32 h-40 bg-gray-300 rounded flex-shrink-0"></div>
-                    <div className="flex flex-col justify-center h-40">
-                      <div className="text-xs text-gray-600">
-                        <div className="flex items-center gap-2">
-                          <span>📧</span>
-                          <span>jason@outlook.com</span>
-                        </div>
-                      </div>
-                    </div>
+              {/* Header with close button */}
+              <div className="flex justify-end p-4 pb-2">
+                <button
+                  onClick={() => setSelectedMember(null)}
+                  className="text-gray-400 hover:text-gray-600"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              {/* Photo section */}
+              <div className="px-6 pb-4">
+                <div className="w-full h-48 bg-gray-300 rounded"></div>
+              </div>
+
+              {/* Email section */}
+              <div className="px-6 pb-4">
+                <div className="text-xs text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <span>📧</span>
+                    <span>jason@outlook.com</span>
                   </div>
-                  <button
-                    onClick={() => setSelectedMember(null)}
-                    className="text-gray-400 hover:text-gray-600 flex-shrink-0"
-                  >
-                    <X size={20} />
-                  </button>
                 </div>
               </div>
 
-              {/* Bottom section - Name and career */}
-              <div className="flex-1 p-6 flex flex-col">
-                <div className="mb-4">
-                  <h2 className="text-lg font-bold text-gray-900 mb-1">
-                    {selectedMember.name}
-                  </h2>
-                  <p className="text-gray-600 text-sm">{selectedMember.position}</p>
-                </div>
+              {/* Name and position section */}
+              <div className="px-6 pb-4">
+                <h2 className="text-lg font-bold text-gray-900 mb-1">
+                  {selectedMember.name}
+                </h2>
+                <p className="text-gray-600 text-sm">{selectedMember.position}</p>
+              </div>
 
-                <div className="flex-1">
-                  <h3 className="font-bold text-gray-900 mb-3">경력사항</h3>
-                  <div className="relative flex-1">
-                    <div className="overflow-y-auto h-full scrollbar-hide" id="career-scroll-mobile">
-                      <div className="space-y-2">
-                        {selectedMember.career.map((item, index) => (
-                          <p key={index} className="text-gray-700 text-sm leading-relaxed">
-                            {item}
-                          </p>
-                        ))}
-                      </div>
+              {/* Career section with scroll */}
+              <div className="flex-1 px-6 pb-6 flex flex-col min-h-0">
+                <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
+                <div className="relative flex-1 min-h-0">
+                  <div className="overflow-y-auto h-full scrollbar-hide" id="career-scroll-mobile">
+                    <div className="space-y-2 pb-2">
+                      {selectedMember.career.map((item, index) => (
+                        <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                          {item}
+                        </p>
+                      ))}
                     </div>
-                    {/* 스크롤 그라데이션 */}
-                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-gradient-mobile"></div>
                   </div>
+                  {/* 스크롤 그라데이�� */}
+                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-gradient-mobile"></div>
                 </div>
               </div>
             </div>
