@@ -273,7 +273,7 @@ export default function Team() {
               {/* Career section with scroll */}
               <div className="flex-1 px-6 pb-6 flex flex-col min-h-0">
                 <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
-                <div className="relative flex-1 min-h-0">
+                <div className="relative flex-1 overflow-hidden">
                   <div className="overflow-y-auto h-full scrollbar-hide" id="career-scroll-mobile">
                     <div className="space-y-2 pb-2">
                       {selectedMember.career.map((item, index) => (
