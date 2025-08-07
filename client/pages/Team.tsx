@@ -54,7 +54,7 @@ const teamMembers: TeamMember[] = [
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템",
-      "스닥상장사 대한뉴팜(주) 대표이사",
+      "스닥상장사 대��뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
@@ -102,6 +102,45 @@ export default function Team() {
     return () => {
       document.body.style.overflow = 'unset';
     };
+  }, [selectedMember]);
+
+  // 스크롤 그라데이션 효과 제어
+  useEffect(() => {
+    if (selectedMember) {
+      const checkScrollable = (scrollContainerId: string, gradientId: string) => {
+        const scrollContainer = document.getElementById(scrollContainerId);
+        const gradient = document.getElementById(gradientId);
+
+        if (scrollContainer && gradient) {
+          const isScrollable = scrollContainer.scrollHeight > scrollContainer.clientHeight;
+
+          if (isScrollable) {
+            // 스크롤 가능한 경우 그라데이션 표시
+            gradient.style.opacity = '1';
+
+            const handleScroll = () => {
+              const { scrollTop, scrollHeight, clientHeight } = scrollContainer;
+              const isAtBottom = scrollTop + clientHeight >= scrollHeight - 10;
+              gradient.style.opacity = isAtBottom ? '0' : '1';
+            };
+
+            scrollContainer.addEventListener('scroll', handleScroll);
+            return () => scrollContainer.removeEventListener('scroll', handleScroll);
+          } else {
+            // 스크롤 불가능한 경우 그라데이션 숨김
+            gradient.style.opacity = '0';
+          }
+        }
+      };
+
+      // 약간의 지연을 두어 DOM이 완전히 렌더링된 후 실행
+      const timeoutId = setTimeout(() => {
+        checkScrollable('career-scroll-desktop', 'scroll-gradient-desktop');
+        checkScrollable('career-scroll-mobile', 'scroll-gradient-mobile');
+      }, 100);
+
+      return () => clearTimeout(timeoutId);
+    }
   }, [selectedMember]);
 
   return (
