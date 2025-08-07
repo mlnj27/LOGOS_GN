@@ -48,7 +48,12 @@ export default function Greeting() {
                 
                 <div className="text-right mt-12">
                   <p className="text-lg font-medium">
-                    세무법인 로고스 대표 윤 영 호
+                    세무법인 로고스 대표{" "}
+                    <span style={{fontSize: "25px"}}>
+                      <strong>
+                        <span style={{fontSize: "24px"}}>윤 영 호</span>
+                      </strong>
+                    </span>
                   </p>
                 </div>
               </div>
