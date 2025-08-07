@@ -47,7 +47,7 @@ const teamMembers: TeamMember[] = [
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F055b524f08ab4509b1e0f627cf76df15?format=webp&width=800",
     career: [
       "스닥상장사 대한뉴팜(주) 대표이사",
-      "한국철도공사(코레일) 경영평가위원",
+      "한국철도공사(코��일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
@@ -74,7 +74,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: "noh",
-    name: "노 현 철",
+    name: "��� 현 철",
     position: "이 사",
     image: "/placeholder.svg",
     career: [
@@ -271,7 +271,7 @@ export default function Team() {
               </div>
 
               {/* Career section with scroll */}
-              <div className="flex-1 px-6 pb-6 flex flex-col min-h-0">
+              <div className="flex-1 px-6 pb-6 flex flex-col overflow-hidden">
                 <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
                 <div className="relative flex-1 overflow-hidden">
                   <div className="overflow-y-auto h-full scrollbar-hide" id="career-scroll-mobile">
