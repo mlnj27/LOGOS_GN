@@ -13,7 +13,7 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: "yoon",
-    name: "윤 영 호",
+    name: "윤 �� 호",
     position: "대표이사 / 세무사",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2Fae9bf94b741c4098b41114ee1e95224b?format=webp&width=800",
     career: [
@@ -65,7 +65,7 @@ const teamMembers: TeamMember[] = [
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
-      "대한민국정부 헌정 사상 ���초 민간 컨설팅 수행",
+      "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
@@ -236,7 +236,7 @@ export default function Team() {
             </div>
 
             {/* Mobile Layout */}
-            <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm max-h-[85vh] flex flex-col">
+            <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] flex flex-col overflow-hidden">
               {/* Header with close button */}
               <div className="flex justify-end p-4 pb-2">
                 <button
