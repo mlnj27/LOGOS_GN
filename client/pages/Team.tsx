@@ -22,7 +22,7 @@ const teamMembers: TeamMember[] = [
       "국세청 감사관실",
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
-      "금천·성동조사",
+      "금천·성��조사",
       "서울청 부과세과 팀장 등"
     ]
   },
@@ -61,7 +61,7 @@ export default function Team() {
     <Layout heroTitle="구성원">
       <section className="py-16 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {teamMembers.map((member) => (
                 <div
@@ -100,37 +100,49 @@ export default function Team() {
         {/* Modal */}
         {selectedMember && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div className="bg-white rounded-lg shadow-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-              <div className="flex items-start gap-8 p-8">
-                <div className="flex-shrink-0">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
-                    alt="로고"
-                    className="w-16 h-16 object-contain mb-4"
-                  />
-                  <div className="w-40 h-52 bg-gray-300 rounded"></div>
-                </div>
-                
-                <div className="flex-1">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                        {selectedMember.name} {selectedMember.position}
-                      </h2>
-                    </div>
-                    <button
-                      onClick={() => setSelectedMember(null)}
-                      className="text-gray-400 hover:text-gray-600"
-                    >
-                      <X size={24} />
-                    </button>
+            <div className="bg-white rounded-lg shadow-lg max-w-2xl w-full max-h-[80vh] flex">
+              {/* Left side - Photo and contact info */}
+              <div className="flex-shrink-0 w-64 p-6 border-r border-gray-200">
+                <div className="w-48 h-64 bg-gray-300 rounded mb-6 mx-auto"></div>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex items-center gap-2">
+                    <span>📧</span>
+                    <span>jason@outlook.com</span>
                   </div>
-                  
+                  <div className="flex items-center gap-2">
+                    <span>📞</span>
+                    <span>+82 2 540 2153</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span>📠</span>
+                    <span>+82 2 540 2154</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right side - Info and career */}
+              <div className="flex-1 p-6 flex flex-col">
+                <div className="flex items-start justify-between mb-6">
                   <div>
-                    <h3 className="font-bold text-gray-900 mb-4 text-lg">경력</h3>
-                    <div className="space-y-1">
+                    <h2 className="text-xl font-bold text-gray-900 mb-2">
+                      {selectedMember.name}
+                    </h2>
+                    <p className="text-gray-600">{selectedMember.position}</p>
+                  </div>
+                  <button
+                    onClick={() => setSelectedMember(null)}
+                    className="text-gray-400 hover:text-gray-600 flex-shrink-0"
+                  >
+                    <X size={20} />
+                  </button>
+                </div>
+
+                <div className="flex-1">
+                  <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
+                  <div className="overflow-y-auto max-h-80 scrollbar-hide pr-2">
+                    <div className="space-y-2">
                       {selectedMember.career.map((item, index) => (
-                        <p key={index} className="text-gray-700 text-base leading-relaxed">
+                        <p key={index} className="text-gray-700 text-sm leading-relaxed">
                           {item}
                         </p>
                       ))}
