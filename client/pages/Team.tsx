@@ -65,7 +65,7 @@ const teamMembers: TeamMember[] = [
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
-      "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
+      "대한민국정부 헌정 사상 ���초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
@@ -218,9 +218,9 @@ export default function Team() {
 
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
-                  <div className="relative">
-                    <div className="overflow-y-auto max-h-80 scrollbar-hide pr-2" id="career-scroll-desktop">
-                      <div className="space-y-2">
+                  <div className="relative overflow-hidden">
+                    <div className="overflow-y-auto max-h-80 scrollbar-hide" id="career-scroll-desktop">
+                      <div className="space-y-2 pr-2">
                         {selectedMember.career.map((item, index) => (
                           <p key={index} className="text-gray-700 text-sm leading-relaxed">
                             {item}
