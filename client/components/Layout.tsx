@@ -207,7 +207,6 @@ export default function Layout({
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-slate-800/50 to-slate-700/30"></div>
 
-
         <div className="container mx-auto px-4 relative z-10">
           <div className={`${isHomepage ? "max-w-3xl" : "text-center"}`}>
             <h1

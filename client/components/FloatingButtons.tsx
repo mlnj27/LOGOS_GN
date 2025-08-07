@@ -23,7 +23,6 @@ export default function FloatingButtons() {
             <Phone className="w-6 h-6 text-white mb-1" />
             <span className="text-xs text-white font-medium">전화상담</span>
           </button>
-
         </div>
       </div>
 
