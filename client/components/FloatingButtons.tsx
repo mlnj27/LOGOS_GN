@@ -33,21 +33,11 @@ export default function FloatingButtons() {
           {/* Phone Button */}
           <button
             onClick={handlePhoneCall}
-            className="flex-1 flex items-center justify-center py-4 border-r border-blue-600"
+            className="flex-1 flex items-center justify-center py-4"
             style={{ backgroundColor: "#070D4C" }}
           >
             <Phone className="w-5 h-5 text-white mr-2" />
             <span className="text-white font-medium">전화상담</span>
-          </button>
-
-          {/* KakaoTalk Button */}
-          <button
-            onClick={handleKakaoChat}
-            className="flex-1 flex items-center justify-center py-4"
-            style={{ backgroundColor: "#070D4C" }}
-          >
-            <MessageCircle className="w-5 h-5 text-white mr-2" />
-            <span className="text-white font-medium">카톡상담</span>
           </button>
         </div>
       </div>
