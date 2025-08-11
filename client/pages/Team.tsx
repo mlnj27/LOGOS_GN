@@ -76,7 +76,7 @@ const teamMembers: TeamMember[] = [
     id: "noh",
     name: "��� 현 철",
     position: "이 사",
-    image: "/placeholder.svg",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2Fec026117eb1e49e69a4b85e434c1074c?format=webp&width=800",
     career: [
       "국세청 15년 근무",
       "분당 법인 의정부 재산 등",
