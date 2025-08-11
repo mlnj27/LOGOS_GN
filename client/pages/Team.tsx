@@ -60,7 +60,7 @@ const teamMembers: TeamMember[] = [
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
-      "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
+      "대한민국정부 ���정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
@@ -148,44 +148,95 @@ export default function Team() {
       <section className="py-16 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {teamMembers.map((member) => (
+            {/* First row - 2 cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+              {teamMembers.slice(0, 2).map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex flex-col"
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
                   onClick={() => setSelectedMember(member)}
                 >
-                  {/* Logo at top left */}
-                  <div className="flex justify-start mb-4">
-                    <img
-                      src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
-                      alt="로고"
-                      className="w-8 h-8 object-contain"
-                    />
-                  </div>
-
-                  {/* Name */}
-                  <h3 className="font-bold text-base text-gray-900 mb-2 text-left">
-                    {member.name}
-                  </h3>
-
-                  {/* Position */}
-                  <p className="text-xs mb-3 text-left" style={{color: '#703B1F'}}>
-                    {member.position}
-                  </p>
-
-                  {/* Specialization */}
-                  <p className="text-xs mb-4 text-left leading-relaxed" style={{color: '#345A9E'}}>
-                    {member.specialization}
-                  </p>
-
-                  {/* Large photo at bottom center */}
-                  <div className="flex-1 flex items-end justify-center">
+                  {/* Left side - Photo */}
+                  <div className="flex-shrink-0 mr-6">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="w-32 h-40 object-contain rounded bg-white"
                     />
+                  </div>
+
+                  {/* Right side - Info */}
+                  <div className="flex-1 flex flex-col">
+                    {/* Logo */}
+                    <div className="mb-3">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                        alt="로고"
+                        className="w-8 h-8 object-contain"
+                      />
+                    </div>
+
+                    {/* Name */}
+                    <h3 className="font-bold text-lg text-gray-900 mb-2">
+                      {member.name}
+                    </h3>
+
+                    {/* Position */}
+                    <p className="text-xs mb-3" style={{color: '#703B1F'}}>
+                      {member.position}
+                    </p>
+
+                    {/* Specialization */}
+                    <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
+                      {member.specialization}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Second row - 1 card centered */}
+            <div className="flex justify-center">
+              {teamMembers.slice(2).map((member) => (
+                <div
+                  key={member.id}
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex max-w-md"
+                  onClick={() => setSelectedMember(member)}
+                >
+                  {/* Left side - Photo */}
+                  <div className="flex-shrink-0 mr-6">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-40 object-contain rounded bg-white"
+                    />
+                  </div>
+
+                  {/* Right side - Info */}
+                  <div className="flex-1 flex flex-col">
+                    {/* Logo */}
+                    <div className="mb-3">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                        alt="로고"
+                        className="w-8 h-8 object-contain"
+                      />
+                    </div>
+
+                    {/* Name */}
+                    <h3 className="font-bold text-lg text-gray-900 mb-2">
+                      {member.name}
+                    </h3>
+
+                    {/* Position */}
+                    <p className="text-xs mb-3" style={{color: '#703B1F'}}>
+                      {member.position}
+                    </p>
+
+                    {/* Specialization */}
+                    <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
+                      {member.specialization}
+                    </p>
                   </div>
                 </div>
               ))}
