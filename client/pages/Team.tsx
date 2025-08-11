@@ -6,6 +6,7 @@ interface TeamMember {
   id: string;
   name: string;
   position: string;
+  specialization: string;
   image: string;
   career: string[];
 }
@@ -15,6 +16,7 @@ const teamMembers: TeamMember[] = [
     id: "yoon",
     name: "윤 영 호",
     position: "대표이사 / 세무사",
+    specialization: "세무조사, 재산세 (양도, 증여, 상속), 법인세 분야 전문가",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 32년 근무",
@@ -44,11 +46,12 @@ const teamMembers: TeamMember[] = [
     id: "lee",
     name: "이 영 섭",
     position: "고 문",
+    specialization: "기업 컸설팅, M&A 분야 전문가",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
-      "상명대학교 산업경영학과 초빙교수",
+      "상명대학교 산업경영학과 초빙교��",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
       "MBC ��략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
@@ -76,6 +79,7 @@ const teamMembers: TeamMember[] = [
     id: "noh",
     name: "노 현 철",
     position: "이 사",
+    specialization: "소득세, ���가세, 재산세 전문가",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 15년 근무",
