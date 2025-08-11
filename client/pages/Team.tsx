@@ -13,7 +13,7 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: "yoon",
-    name: "윤 �� 호",
+    name: "윤 한 호",
     position: "대표이사 / 세무사",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2Fae9bf94b741c4098b41114ee1e95224b?format=webp&width=800",
     career: [
@@ -23,14 +23,14 @@ const teamMembers: TeamMember[] = [
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
-      "서울청 부과세과 ���장 등",
+      "서울청 부과세과 팀장 등",
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
       "국세청 감사관실",
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
-      "서울청 부과세과 팀��� 등",
+      "서울청 부과세과 팀장 등",
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
       "국세청 감사관실",
@@ -46,8 +46,8 @@ const teamMembers: TeamMember[] = [
     position: "고 문",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F055b524f08ab4509b1e0f627cf76df15?format=webp&width=800",
     career: [
-      "스닥상장사 대한뉴팜(주) 대표이��",
-      "한국철도공사(코��일) 경영평가위원",
+      "스닥상장사 대한뉴팜(주) 대표이사",
+      "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
@@ -58,7 +58,7 @@ const teamMembers: TeamMember[] = [
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
-      "MBC 전략정보경영시스템 도입을 위�� 진단",
+      "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템",
@@ -68,13 +68,13 @@ const teamMembers: TeamMember[] = [
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
-      "LG전자 가전본부 원가관��",
+      "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템"
     ]
   },
   {
     id: "noh",
-    name: "��� 현 철",
+    name: "노 현 철",
     position: "이 사",
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2Fec026117eb1e49e69a4b85e434c1074c?format=webp&width=800",
     career: [
@@ -104,7 +104,7 @@ export default function Team() {
     };
   }, [selectedMember]);
 
-  // 스크롤 그라데이션 효과 제어
+  // 스크롤 그라데이션 효과 제어 (데스크톱만)
   useEffect(() => {
     if (selectedMember) {
       const checkScrollable = (scrollContainerId: string, gradientId: string) => {
@@ -115,7 +115,6 @@ export default function Team() {
           const isScrollable = scrollContainer.scrollHeight > scrollContainer.clientHeight;
 
           if (isScrollable) {
-            // 스크롤 가능한 경우 그라데이션 표시
             gradient.style.opacity = '1';
 
             const handleScroll = () => {
@@ -127,16 +126,13 @@ export default function Team() {
             scrollContainer.addEventListener('scroll', handleScroll);
             return () => scrollContainer.removeEventListener('scroll', handleScroll);
           } else {
-            // 스크롤 불가능한 경우 그라데이션 숨김
             gradient.style.opacity = '0';
           }
         }
       };
 
-      // 약간의 지연을 두어 DOM이 완전히 렌더링된 후 실행
       const timeoutId = setTimeout(() => {
         checkScrollable('career-scroll-desktop', 'scroll-gradient-desktop');
-        checkScrollable('career-scroll-mobile', 'scroll-gradient-mobile');
       }, 100);
 
       return () => clearTimeout(timeoutId);
@@ -235,7 +231,7 @@ export default function Team() {
               </div>
             </div>
 
-            {/* Mobile Layout */}
+            {/* Mobile Layout - Now with full modal scroll */}
             <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] overflow-y-auto">
               {/* Header with close button */}
               <div className="flex justify-end p-4 pb-2">
@@ -270,21 +266,15 @@ export default function Team() {
                 <p className="text-gray-600 text-sm">{selectedMember.position}</p>
               </div>
 
-              {/* Career section with scroll */}
+              {/* Career section - simplified for full modal scroll */}
               <div className="px-6 pb-6">
                 <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
                 <div className="space-y-2">
-                  <div className="overflow-y-auto h-full scrollbar-hide" id="career-scroll-mobile">
-                    <div className="space-y-2 pb-2">
-                      {selectedMember.career.map((item, index) => (
-                        <p key={index} className="text-gray-700 text-sm leading-relaxed">
-                          {item}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                  {/* 스크롤 그라데이�� */}
-                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-gradient-mobile"></div>
+                  {selectedMember.career.map((item, index) => (
+                    <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                      {item}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>
