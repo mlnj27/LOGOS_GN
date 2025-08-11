@@ -50,7 +50,7 @@ const teamMembers: TeamMember[] = [
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
-      "MBC 전략정보경영시스템 도입을 위한 진단",
+      "MBC ��략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템",
@@ -173,7 +173,7 @@ export default function Team() {
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-20 h-20 object-cover rounded"
+                        className="w-28 h-32 object-contain rounded bg-gray-100"
                       />
                     </div>
                   </div>
@@ -256,7 +256,7 @@ export default function Team() {
                 <img
                   src={selectedMember.image}
                   alt={selectedMember.name}
-                  className="w-full h-48 object-cover rounded"
+                  className="w-full h-56 object-contain rounded bg-gray-100"
                 />
               </div>
 
