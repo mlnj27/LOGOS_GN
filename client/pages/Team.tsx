@@ -65,7 +65,7 @@ const teamMembers: TeamMember[] = [
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템",
-      "스닥상장사 대한뉴팜(주) 대표이사",
+      "스닥��장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 ���설팅 수행",
@@ -317,7 +317,7 @@ export default function Team() {
                 <img
                   src={selectedMember.image}
                   alt={selectedMember.name}
-                  className="w-full h-56 object-contain rounded bg-gray-100"
+                  className="w-full h-56 object-contain rounded bg-white"
                 />
               </div>
 
