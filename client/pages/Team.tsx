@@ -236,7 +236,7 @@ export default function Team() {
             </div>
 
             {/* Mobile Layout */}
-            <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] flex flex-col overflow-hidden">
+            <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] overflow-y-auto">
               {/* Header with close button */}
               <div className="flex justify-end p-4 pb-2">
                 <button
