@@ -151,31 +151,28 @@ export default function Team() {
                   className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="flex items-start justify-between mb-4">
+                  {/* Top section with logo and photo */}
+                  <div className="flex items-start justify-between mb-6">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
                       alt="로고"
                       className="w-12 h-12 object-contain"
                     />
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-20 h-24 object-contain rounded bg-white"
+                    />
                   </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <div className="text-left">
-                      <h3 className="font-bold text-lg text-gray-900 mb-1">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm" style={{color: '#070D4C'}}>
-                        {member.position}
-                      </p>
-                    </div>
-                    
-                    <div className="ml-auto">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-28 h-32 object-contain rounded bg-gray-100"
-                      />
-                    </div>
+
+                  {/* Bottom section with name and position */}
+                  <div className="text-left">
+                    <h3 className="font-bold text-lg text-gray-900 mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm" style={{color: '#070D4C'}}>
+                      {member.position}
+                    </p>
                   </div>
                 </div>
               ))}
