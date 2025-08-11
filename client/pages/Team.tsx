@@ -65,7 +65,7 @@ const teamMembers: TeamMember[] = [
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
-      "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
+      "대한민국정부 헌정 사상 최초 민간 ���설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
@@ -144,35 +144,39 @@ export default function Team() {
       <section className="py-16 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow"
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex flex-col"
                   onClick={() => setSelectedMember(member)}
                 >
-                  {/* Top section with logo and photo */}
-                  <div className="flex items-start justify-between mb-6">
+                  {/* Logo at top left */}
+                  <div className="flex justify-start mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
                       alt="로고"
-                      className="w-12 h-12 object-contain"
-                    />
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-20 h-24 object-contain rounded bg-white"
+                      className="w-8 h-8 object-contain"
                     />
                   </div>
 
-                  {/* Bottom section with name and position */}
-                  <div className="text-left">
-                    <h3 className="font-bold text-lg text-gray-900 mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm" style={{color: '#070D4C'}}>
-                      {member.position}
-                    </p>
+                  {/* Name */}
+                  <h3 className="font-bold text-base text-gray-900 mb-2 text-left">
+                    {member.name}
+                  </h3>
+
+                  {/* Position */}
+                  <p className="text-sm text-gray-600 mb-4 text-left">
+                    {member.position}
+                  </p>
+
+                  {/* Large photo at bottom center */}
+                  <div className="flex-1 flex items-end justify-center">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-40 object-contain rounded bg-white"
+                    />
                   </div>
                 </div>
               ))}
