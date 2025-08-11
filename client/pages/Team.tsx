@@ -68,7 +68,7 @@ const teamMembers: TeamMember[] = [
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
-      "LG전자 가전본부 원가관리",
+      "LG전자 가전본부 원가관��",
       "SK Chemical 지식경영시스템"
     ]
   },
@@ -271,7 +271,7 @@ export default function Team() {
               </div>
 
               {/* Career section with scroll */}
-              <div className="flex-1 px-6 pb-6 flex flex-col overflow-hidden">
+              <div className="px-6 pb-6">
                 <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
                 <div className="relative flex-1 overflow-hidden">
                   <div className="overflow-y-auto h-full scrollbar-hide" id="career-scroll-mobile">
