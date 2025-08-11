@@ -65,7 +65,7 @@ const teamMembers: TeamMember[] = [
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
       "SK Chemical 지식경영시스템",
-      "스닥��장사 대한뉴팜(주) 대표이사",
+      "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
       "대한민국정부 헌정 사상 최초 민간 ���설팅 수행",
@@ -156,17 +156,8 @@ export default function Team() {
                   className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
                   onClick={() => setSelectedMember(member)}
                 >
-                  {/* Left side - Photo */}
-                  <div className="flex-shrink-0 mr-6">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-32 h-40 object-contain rounded bg-white"
-                    />
-                  </div>
-
-                  {/* Right side - Info */}
-                  <div className="flex-1 flex flex-col">
+                  {/* Left side - Info */}
+                  <div className="flex-1 flex flex-col mr-6">
                     {/* Logo */}
                     <div className="mb-3">
                       <img
@@ -190,30 +181,30 @@ export default function Team() {
                     <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
                       {member.specialization}
                     </p>
+                  </div>
+
+                  {/* Right side - Photo */}
+                  <div className="flex-shrink-0">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-40 object-contain rounded bg-white"
+                    />
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Second row - 1 card centered */}
-            <div className="flex justify-center">
+            {/* Second row - 1 card left aligned */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {teamMembers.slice(2).map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex max-w-md"
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
                   onClick={() => setSelectedMember(member)}
                 >
-                  {/* Left side - Photo */}
-                  <div className="flex-shrink-0 mr-6">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-32 h-40 object-contain rounded bg-white"
-                    />
-                  </div>
-
-                  {/* Right side - Info */}
-                  <div className="flex-1 flex flex-col">
+                  {/* Left side - Info */}
+                  <div className="flex-1 flex flex-col mr-6">
                     {/* Logo */}
                     <div className="mb-3">
                       <img
@@ -237,6 +228,15 @@ export default function Team() {
                     <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
                       {member.specialization}
                     </p>
+                  </div>
+
+                  {/* Right side - Photo */}
+                  <div className="flex-shrink-0">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-32 h-40 object-contain rounded bg-white"
+                    />
                   </div>
                 </div>
               ))}
