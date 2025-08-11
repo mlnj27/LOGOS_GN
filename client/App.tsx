@@ -12,6 +12,7 @@ import Team from "./pages/Team";
 import Services from "./pages/Services";
 import Directions from "./pages/Directions";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
