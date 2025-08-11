@@ -71,7 +71,7 @@ const teamMembers: TeamMember[] = [
       "대한민국정부 헌정 사상 최초 민간 ���설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
-      "LG전자 가전본부 원가관리",
+      "LG전자 가전본부 원가���리",
       "SK Chemical 지식경영시스템"
     ]
   },
@@ -170,8 +170,13 @@ export default function Team() {
                   </h3>
 
                   {/* Position */}
-                  <p className="text-sm text-gray-600 mb-4 text-left">
+                  <p className="text-xs mb-3 text-left" style={{color: '#703B1F'}}>
                     {member.position}
+                  </p>
+
+                  {/* Specialization */}
+                  <p className="text-xs mb-4 text-left leading-relaxed" style={{color: '#345A9E'}}>
+                    {member.specialization}
                   </p>
 
                   {/* Large photo at bottom center */}
