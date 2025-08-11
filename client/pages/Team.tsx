@@ -15,7 +15,7 @@ const teamMembers: TeamMember[] = [
     id: "yoon",
     name: "윤 영 호",
     position: "대표이사 / 세무사",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2Fae9bf94b741c4098b41114ee1e95224b?format=webp&width=800",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
@@ -44,7 +44,7 @@ const teamMembers: TeamMember[] = [
     id: "lee",
     name: "이 영 섭",
     position: "고 문",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F055b524f08ab4509b1e0f627cf76df15?format=webp&width=800",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
@@ -76,7 +76,7 @@ const teamMembers: TeamMember[] = [
     id: "noh",
     name: "노 현 철",
     position: "이 사",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2Fec026117eb1e49e69a4b85e434c1074c?format=webp&width=800",
+    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 15년 근무",
       "분당 법인 의정부 재산 등",
@@ -170,7 +170,11 @@ export default function Team() {
                     </div>
                     
                     <div className="ml-auto">
-                      <div className="w-20 h-20 bg-gray-300 rounded"></div>
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-20 h-20 object-cover rounded"
+                      />
                     </div>
                   </div>
                 </div>
@@ -186,7 +190,11 @@ export default function Team() {
             <div className="hidden md:flex bg-white rounded-lg shadow-lg max-w-2xl w-full max-h-[80vh]">
               {/* Left side - Photo and contact info */}
               <div className="flex-shrink-0 w-64 p-6 border-r border-gray-200">
-                <div className="w-48 h-64 bg-gray-300 rounded mb-6 mx-auto"></div>
+                <img
+                  src={selectedMember.image}
+                  alt={selectedMember.name}
+                  className="w-48 h-64 object-cover rounded mb-6 mx-auto"
+                />
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
@@ -245,7 +253,11 @@ export default function Team() {
 
               {/* Photo section */}
               <div className="px-6 pb-4">
-                <div className="w-full h-48 bg-gray-300 rounded"></div>
+                <img
+                  src={selectedMember.image}
+                  alt={selectedMember.name}
+                  className="w-full h-48 object-cover rounded"
+                />
               </div>
 
               {/* Email section */}
