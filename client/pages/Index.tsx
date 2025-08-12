@@ -8,7 +8,7 @@ export default function Index() {
   const services = [
     "세금신고업무",
     "상속, 증여, 양도 신고",
-    "경정청구(환급)",
+    "경정청구(��급)",
     "조세불복",
     "세무컨설팅",
     "세무조사 수임",
@@ -99,7 +99,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-            <p className="text-xs md:text-sm lg:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
+            <p className="text-base md:text-sm lg:text-lg text-gray-700 leading-relaxed mb-6 md:mb-8">
               재산세, 법인세, 조세불복 등 복잡한 세금 문제로 고민중이신가요?
               <br />
               이제 세무법��� 로고스 강남지점이 책임지고 해결해드리겠습니다.
@@ -148,7 +148,7 @@ export default function Index() {
               담당 업무
             </h3>
             <p className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
+              이 모든 업무를 세무법인 로고스 강남에서 제���하고 있습니다.
             </p>
           </div>
 
