@@ -9,7 +9,7 @@ export default function Index() {
     "세금신고업무",
     "상속, 증여, 양도 신고",
     "경정청구(환급)",
-    "조���불복",
+    "조세불복",
     "세무컨설팅",
     "세무조사 수임",
   ];
@@ -130,7 +130,7 @@ export default function Index() {
               <div className="text-center">
                 <Link
                   to="/team"
-                  className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-sm md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors mt-3"
+                  className="inline-block bg-[#7BB0E3] text-white px-6 md:px-10 py-3 md:py-4 rounded-lg text-lg md:text-base font-semibold hover:bg-[#5A9BD4] transition-colors mt-3"
                 >
                   구성원 소개
                 </Link>
@@ -148,7 +148,7 @@ export default function Index() {
               담당 업무
             </h3>
             <p className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있��니다.
+              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
             </p>
           </div>
 
@@ -201,7 +201,7 @@ export default function Index() {
               </div>
               <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-[#7BB0E3]/30">
                 <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
-                  방��� 상담
+                  방문 상담
                 </h4>
                 <p className="text-sm md:text-base text-gray-700 mb-2">
                   서울특별시 강남구 테헤란로20길 18
