@@ -148,7 +148,7 @@ export default function Index() {
               담당 업무
             </h3>
             <p className="text-lg md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
+              이 모든 업무를 세무법인 로고스 강남에서 제��하고 있습니다.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ export default function Index() {
                 className="bg-white p-4 md:p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow group flex flex-col border-4 border-[#7bb0e3]"
               >
                 <div className="h-1.5 md:h-2 w-8 md:w-12 bg-[#7BB0E3] mb-4 md:mb-6 group-hover:w-12 md:group-hover:w-16 transition-all duration-300 text-center mx-auto"></div>
-                <h4 className="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 text-center">
+                <h4 className="text-xl md:text-xl font-semibold text-gray-800 mb-3 md:mb-4 text-center">
                   {service}
                 </h4>
               </div>
