@@ -144,11 +144,11 @@ export default function Index() {
       <section className="py-16 md:py-28 bg-white border-t border-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-20">
-            <h3 className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
               담당 업무
             </h3>
             <p className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
+              이 모든 업무를 세무법인 로고스 강남에서 제공��고 있습니다.
             </p>
           </div>
 
