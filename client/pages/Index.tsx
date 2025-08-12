@@ -203,7 +203,7 @@ export default function Index() {
                 <h4 className="text-xl md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
                   방문 상담
                 </h4>
-                <p className="text-sm md:text-base text-gray-700 mb-2">
+                <p className="text-lg md:text-base text-gray-700 mb-2">
                   서울특별시 강남구 테헤란로20길 18
                 </p>
                 <Link
