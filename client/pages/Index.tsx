@@ -116,7 +116,7 @@ export default function Index() {
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
               <div className="text-center">
                 <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
-                  전문가 그룹이 고객의 상황에 맞��
+                  전문가 그룹이 고객의 상황에 맞는
                 </p>
                 <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
                   <span className="text-lg md:text-xl text-[#3C6ADD] font-bold italic">
@@ -148,7 +148,7 @@ export default function Index() {
               담당 업무
             </h3>
             <p className="text-lg md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
+              이 모든 업무를 세무법인 로고스 강남에서 제공��고 있습니다.
             </p>
           </div>
 
@@ -181,7 +181,7 @@ export default function Index() {
       <section className="py-16 md:py-28 bg-gradient-to-br from-[#7BB0E3]/10 to-[#7BB0E3]/20 border-t border-[#7BB0E3]/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-8">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-8">
               상담 문의
             </h3>
             <p className="text-sm md:text-lg text-gray-600 mb-8 md:mb-12">
