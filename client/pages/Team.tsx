@@ -26,7 +26,7 @@ const teamMembers: TeamMember[] = [
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
       "서울청 부과세과 팀장 등",
-      "국세청 32년 근무",
+      "국세청 32년 근��",
       "반포재산, 도봉법인, 북전주조사과장",
       "국세청 감사관실",
       "서울청 1국, 조사 3국",
@@ -56,7 +56,7 @@ const teamMembers: TeamMember[] = [
       "MBC ��략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
-      "SK Chemical 지식경영시스템",
+      "SK Chemical ��식경영시스템",
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
@@ -83,7 +83,7 @@ const teamMembers: TeamMember[] = [
     image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 15년 근무",
-      "분당 법인 의정부 재산 등",
+      "분�� 법인 의정부 재산 등",
       "국세청 15년 근무",
       "분당 법인 의정부 재산 등",
       "국세청 15년 근무",
@@ -148,94 +148,142 @@ export default function Team() {
       <section className="py-16 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            {/* First row - 2 cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-              {teamMembers.slice(0, 2).map((member) => (
-                <div
-                  key={member.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
-                  onClick={() => setSelectedMember(member)}
-                >
-                  {/* Left side - Info */}
-                  <div className="flex-1 flex flex-col mr-6">
-                    {/* Logo */}
-                    <div className="mb-3">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
-                        alt="로고"
-                        className="w-8 h-8 object-contain"
-                      />
+            {/* Desktop Layout */}
+            <div className="hidden lg:block">
+              {/* First row - 2 cards */}
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                {teamMembers.slice(0, 2).map((member) => (
+                  <div
+                    key={member.id}
+                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
+                    onClick={() => setSelectedMember(member)}
+                  >
+                    {/* Left side - Info */}
+                    <div className="flex-1 flex flex-col mr-6">
+                      {/* Logo */}
+                      <div className="mb-3">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                          alt="로고"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+
+                      {/* Name */}
+                      <h3 className="font-bold text-lg text-gray-900 mb-2">
+                        {member.name}
+                      </h3>
+
+                      {/* Position */}
+                      <p className="text-xs mb-3" style={{color: '#703B1F'}}>
+                        {member.position}
+                      </p>
+
+                      {/* Specialization */}
+                      <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
+                        {member.specialization}
+                      </p>
                     </div>
 
-                    {/* Name */}
-                    <h3 className="font-bold text-lg text-gray-900 mb-2">
-                      {member.name}
-                    </h3>
-
-                    {/* Position */}
-                    <p className="text-xs mb-3" style={{color: '#703B1F'}}>
-                      {member.position}
-                    </p>
-
-                    {/* Specialization */}
-                    <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
-                      {member.specialization}
-                    </p>
+                    {/* Right side - Photo */}
+                    <div className="flex-shrink-0">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-32 h-40 object-contain rounded bg-white"
+                      />
+                    </div>
                   </div>
+                ))}
+              </div>
 
-                  {/* Right side - Photo */}
-                  <div className="flex-shrink-0">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-32 h-40 object-contain rounded bg-white"
-                    />
+              {/* Second row - 1 card left aligned */}
+              <div className="grid grid-cols-2 gap-6">
+                {teamMembers.slice(2).map((member) => (
+                  <div
+                    key={member.id}
+                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
+                    onClick={() => setSelectedMember(member)}
+                  >
+                    {/* Left side - Info */}
+                    <div className="flex-1 flex flex-col mr-6">
+                      {/* Logo */}
+                      <div className="mb-3">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                          alt="로고"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+
+                      {/* Name */}
+                      <h3 className="font-bold text-lg text-gray-900 mb-2">
+                        {member.name}
+                      </h3>
+
+                      {/* Position */}
+                      <p className="text-xs mb-3" style={{color: '#703B1F'}}>
+                        {member.position}
+                      </p>
+
+                      {/* Specialization */}
+                      <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
+                        {member.specialization}
+                      </p>
+                    </div>
+
+                    {/* Right side - Photo */}
+                    <div className="flex-shrink-0">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-32 h-40 object-contain rounded bg-white"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
-            {/* Second row - 1 card left aligned */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {teamMembers.slice(2).map((member) => (
+            {/* Mobile Layout */}
+            <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+              {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex flex-col"
                   onClick={() => setSelectedMember(member)}
                 >
-                  {/* Left side - Info */}
-                  <div className="flex-1 flex flex-col mr-6">
-                    {/* Logo */}
-                    <div className="mb-3">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
-                        alt="로고"
-                        className="w-8 h-8 object-contain"
-                      />
-                    </div>
-
-                    {/* Name */}
-                    <h3 className="font-bold text-lg text-gray-900 mb-2">
-                      {member.name}
-                    </h3>
-
-                    {/* Position */}
-                    <p className="text-xs mb-3" style={{color: '#703B1F'}}>
-                      {member.position}
-                    </p>
-
-                    {/* Specialization */}
-                    <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
-                      {member.specialization}
-                    </p>
+                  {/* Logo at top left */}
+                  <div className="flex justify-start mb-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                      alt="로고"
+                      className="w-8 h-8 object-contain"
+                    />
                   </div>
 
-                  {/* Right side - Photo */}
-                  <div className="flex-shrink-0">
+                  {/* Name - black, slightly bigger text */}
+                  <h3 className="font-bold text-lg text-black mb-2 text-left">
+                    {member.name}
+                  </h3>
+
+                  {/* Position - #703B1F color */}
+                  <p className="text-sm mb-3 text-left" style={{color: '#703B1F'}}>
+                    {member.position}
+                  </p>
+
+                  {/* Specialization - #345A9E color */}
+                  <p className="text-sm mb-6 text-left leading-relaxed" style={{color: '#345A9E'}}>
+                    {member.specialization}
+                  </p>
+
+                  {/* Photo at bottom center - no visible container */}
+                  <div className="flex justify-center">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-32 h-40 object-contain rounded bg-white"
+                      className="w-40 h-48 object-contain rounded"
+                      style={{backgroundColor: 'transparent'}}
                     />
                   </div>
                 </div>
