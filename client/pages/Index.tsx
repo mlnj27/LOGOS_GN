@@ -208,7 +208,7 @@ export default function Index() {
                 </p>
                 <Link
                   to="/directions"
-                  className="text-sm md:text-base text-[#3d6bdd] hover:text-[#2952cc] font-semibold"
+                  className="text-lg md:text-base text-[#3d6bdd] hover:text-[#2952cc] font-semibold"
                 >
                   오시는 길 보기 →
                 </Link>
