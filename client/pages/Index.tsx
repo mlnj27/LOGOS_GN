@@ -116,7 +116,7 @@ export default function Index() {
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
               <div className="text-center">
                 <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
-                  전문가 그룹이 고객의 상황에 맞는
+                  전문가 그룹이 고객의 상황에 맞��
                 </p>
                 <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
                   <span className="text-lg md:text-xl text-[#3C6ADD] font-bold italic">
@@ -148,7 +148,7 @@ export default function Index() {
               담당 업무
             </h3>
             <p className="text-lg md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제��하고 있습니다.
+              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
             </p>
           </div>
 
@@ -169,7 +169,7 @@ export default function Index() {
           <div className="text-center mt-10 md:mt-16">
             <Link
               to="/services"
-              className="inline-block bg-[#7BB0E3] text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg text-lg md:text-xl font-semibold hover:bg-[#5A9BD4] transition-colors overflow-hidden"
+              className="inline-block bg-[#7BB0E3] text-white px-6 md:px-8 py-2.5 md:py-3 rounded-lg text-xl md:text-xl font-semibold hover:bg-[#5A9BD4] transition-colors overflow-hidden"
             >
               상세 업무 보기
             </Link>
