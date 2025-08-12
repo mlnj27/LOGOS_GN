@@ -215,7 +215,7 @@ export default function Layout({
               {heroTitle}
             </h1>
             {isHomepage && (
-              <div className="text-white/90 text-sm md:text-xl lg:text-2xl font-medium mb-6 md:mb-8">
+              <div className="text-white/90 text-base md:text-2xl lg:text-3xl font-medium mb-6 md:mb-8">
                 "맞춤 상담, 사후관리까지 책임지는
                 <br />
                 믿을 수 있는 세무 동반자"

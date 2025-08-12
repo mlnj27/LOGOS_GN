@@ -6,6 +6,7 @@ interface TeamMember {
   id: string;
   name: string;
   position: string;
+  specialization: string;
   image: string;
   career: string[];
 }
@@ -13,9 +14,11 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     id: "yoon",
-    name: "윤 �� 호",
+    name: "윤 영 호",
     position: "대표이사 / 세무사",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2Fae9bf94b741c4098b41114ee1e95224b?format=webp&width=800",
+    specialization: "세무조사, 재산세 (양도, 증여, 상속), 법인세 분야 전문가",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
@@ -23,33 +26,43 @@ const teamMembers: TeamMember[] = [
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
-      "서울청 부과세과 ���장 등",
+      "서울청 부과세과 팀장 등",
+      "국세청 32년 근��",
+      "반포재산, 도봉법인, 북전주조사과장",
+      "국세청 감사관실",
+      "서울청 1국, 조사 3국",
+      "역삼조사, 삼성법인, 강남재산",
+      "금천·성동조사",
+      "서울청 부과세과 팀장 등",
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
       "국세청 감사관실",
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
-      "서울청 부과세과 팀��� 등",
-      "국세청 32년 근무",
-      "반포재산, 도봉법인, 북전주조사과장",
-      "국세청 감사관실",
-      "서울청 1국, 조사 3국",
-      "역삼조사, 삼성법인, 강남재산",
-      "금천·성동조사",
-      "서울청 부과세과 팀장 등"
-    ]
+      "서울청 부과세과 팀장 등",
+    ],
   },
   {
     id: "lee",
     name: "이 영 섭",
     position: "고 문",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F055b524f08ab4509b1e0f627cf76df15?format=webp&width=800",
+    specialization: "기업 컸설팅, M&A 분야 전문가",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "스닥상장사 대한뉴팜(주) 대표이사",
-      "한국철도공사(코��일) 경영평가위원",
-      "상명대학교 산업경영학과 초빙교수",
+      "한국철도공사(코레일) 경영평가위원",
+      "상명대학교 산업경영학과 초빙교��",
       "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
+      "MBC ��략정보경영시스템 도입을 위한 진단",
+      "삼성전자 가전본부 고문",
+      "LG전자 가전본부 원가관리",
+      "SK Chemical ��식경영시스템",
+      "스닥상장사 대한뉴팜(주) 대표이사",
+      "한국철도공사(코레일) 경영평가위원",
+      "상명대학교 산업경영학과 초빙교수",
+      "대한민국정부 ���정 사상 최초 민간 컨설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가관리",
@@ -57,35 +70,29 @@ const teamMembers: TeamMember[] = [
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
       "상명대학교 산업경영학과 초빙교수",
-      "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
-      "MBC 전략정보경영시스템 도입을 위�� 진단",
-      "삼성전자 가전본부 고문",
-      "LG전자 가전본부 원가관리",
-      "SK Chemical 지식경영시스템",
-      "스닥상장사 대한뉴팜(주) 대표이사",
-      "한국철도공사(코레일) 경영평가위원",
-      "상명대학교 산업경영학과 초빙교수",
-      "대한민국정부 헌정 사상 최초 민간 컨설팅 수행",
+      "대한민국정부 헌정 사상 최초 민간 ���설팅 수행",
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
-      "LG전자 가전본부 원가관리",
-      "SK Chemical 지식경영시스템"
-    ]
+      "LG전자 가전본부 원가���리",
+      "SK Chemical 지식경영시스템",
+    ],
   },
   {
     id: "noh",
-    name: "��� 현 철",
+    name: "노 현 철",
     position: "이 사",
-    image: "/placeholder.svg",
+    specialization: "소득세, ���가세, 재산세 전문가",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 15년 근무",
-      "분당 법인 의정부 재산 등",
+      "분�� 법인 의정부 재산 등",
       "국세청 15년 근무",
       "분당 법인 의정부 재산 등",
       "국세청 15년 근무",
-      "분당 법인 의정부 재산 등"
-    ]
-  }
+      "분당 법인 의정부 재산 등",
+    ],
+  },
 ];
 
 export default function Team() {
@@ -94,49 +101,50 @@ export default function Team() {
   // 모달 열릴 때 배경 스크롤 방지
   useEffect(() => {
     if (selectedMember) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [selectedMember]);
 
-  // 스크롤 그라데이션 효과 제어
+  // 스크롤 그라데이션 효과 제어 (데스크톱만)
   useEffect(() => {
     if (selectedMember) {
-      const checkScrollable = (scrollContainerId: string, gradientId: string) => {
+      const checkScrollable = (
+        scrollContainerId: string,
+        gradientId: string,
+      ) => {
         const scrollContainer = document.getElementById(scrollContainerId);
         const gradient = document.getElementById(gradientId);
 
         if (scrollContainer && gradient) {
-          const isScrollable = scrollContainer.scrollHeight > scrollContainer.clientHeight;
+          const isScrollable =
+            scrollContainer.scrollHeight > scrollContainer.clientHeight;
 
           if (isScrollable) {
-            // 스크롤 가능한 경우 그라데이션 표시
-            gradient.style.opacity = '1';
+            gradient.style.opacity = "1";
 
             const handleScroll = () => {
               const { scrollTop, scrollHeight, clientHeight } = scrollContainer;
               const isAtBottom = scrollTop + clientHeight >= scrollHeight - 10;
-              gradient.style.opacity = isAtBottom ? '0' : '1';
+              gradient.style.opacity = isAtBottom ? "0" : "1";
             };
 
-            scrollContainer.addEventListener('scroll', handleScroll);
-            return () => scrollContainer.removeEventListener('scroll', handleScroll);
+            scrollContainer.addEventListener("scroll", handleScroll);
+            return () =>
+              scrollContainer.removeEventListener("scroll", handleScroll);
           } else {
-            // 스크롤 불가능한 경우 그라데이션 숨김
-            gradient.style.opacity = '0';
+            gradient.style.opacity = "0";
           }
         }
       };
 
-      // 약간의 지연을 두어 DOM이 완전히 렌더링된 후 실행
       const timeoutId = setTimeout(() => {
-        checkScrollable('career-scroll-desktop', 'scroll-gradient-desktop');
-        checkScrollable('career-scroll-mobile', 'scroll-gradient-mobile');
+        checkScrollable("career-scroll-desktop", "scroll-gradient-desktop");
       }, 100);
 
       return () => clearTimeout(timeoutId);
@@ -148,34 +156,155 @@ export default function Team() {
       <section className="py-16 bg-gray-50 min-h-screen">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Desktop Layout */}
+            <div className="hidden lg:block">
+              {/* First row - 2 cards */}
+              <div className="grid grid-cols-2 gap-6 mb-6">
+                {teamMembers.slice(0, 2).map((member) => (
+                  <div
+                    key={member.id}
+                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
+                    onClick={() => setSelectedMember(member)}
+                  >
+                    {/* Left side - Info */}
+                    <div className="flex-1 flex flex-col mr-6">
+                      {/* Logo */}
+                      <div className="mb-3">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                          alt="로고"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+
+                      {/* Name */}
+                      <h3 className="font-bold text-lg text-gray-900 mb-2">
+                        {member.name}
+                      </h3>
+
+                      {/* Position */}
+                      <p className="text-xs mb-3" style={{ color: "#703B1F" }}>
+                        {member.position}
+                      </p>
+
+                      {/* Specialization */}
+                      <p
+                        className="text-xs leading-relaxed"
+                        style={{ color: "#345A9E" }}
+                      >
+                        {member.specialization}
+                      </p>
+                    </div>
+
+                    {/* Right side - Photo */}
+                    <div className="flex-shrink-0">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-32 h-40 object-contain rounded bg-white"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Second row - 1 card left aligned */}
+              <div className="grid grid-cols-2 gap-6">
+                {teamMembers.slice(2).map((member) => (
+                  <div
+                    key={member.id}
+                    className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex"
+                    onClick={() => setSelectedMember(member)}
+                  >
+                    {/* Left side - Info */}
+                    <div className="flex-1 flex flex-col mr-6">
+                      {/* Logo */}
+                      <div className="mb-3">
+                        <img
+                          src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
+                          alt="로고"
+                          className="w-8 h-8 object-contain"
+                        />
+                      </div>
+
+                      {/* Name */}
+                      <h3 className="font-bold text-lg text-gray-900 mb-2">
+                        {member.name}
+                      </h3>
+
+                      {/* Position */}
+                      <p className="text-xs mb-3" style={{ color: "#703B1F" }}>
+                        {member.position}
+                      </p>
+
+                      {/* Specialization */}
+                      <p
+                        className="text-xs leading-relaxed"
+                        style={{ color: "#345A9E" }}
+                      >
+                        {member.specialization}
+                      </p>
+                    </div>
+
+                    {/* Right side - Photo */}
+                    <div className="flex-shrink-0">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-32 h-40 object-contain rounded bg-white"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Mobile Layout */}
+            <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-6">
               {teamMembers.map((member) => (
                 <div
                   key={member.id}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow"
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 cursor-pointer hover:shadow-md transition-shadow flex flex-col"
                   onClick={() => setSelectedMember(member)}
                 >
-                  <div className="flex items-start justify-between mb-4">
+                  {/* Logo at top left */}
+                  <div className="flex justify-start mb-4">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F4ce64c9a24414ec5aeb42f4477a65b1c?format=webp&width=800"
                       alt="로고"
-                      className="w-12 h-12 object-contain"
+                      className="w-8 h-8 object-contain"
                     />
                   </div>
-                  
-                  <div className="flex items-center gap-4">
-                    <div className="text-left">
-                      <h3 className="font-bold text-lg text-gray-900 mb-1">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm" style={{color: '#070D4C'}}>
-                        {member.position}
-                      </p>
-                    </div>
-                    
-                    <div className="ml-auto">
-                      <div className="w-20 h-20 bg-gray-300 rounded"></div>
-                    </div>
+
+                  {/* Name - black, slightly bigger text */}
+                  <h3 className="font-bold text-lg text-black mb-2 text-left">
+                    {member.name}
+                  </h3>
+
+                  {/* Position - #703B1F color */}
+                  <p
+                    className="text-sm mb-3 text-left"
+                    style={{ color: "#703B1F" }}
+                  >
+                    {member.position}
+                  </p>
+
+                  {/* Specialization - #345A9E color */}
+                  <p
+                    className="text-sm mb-6 text-left leading-relaxed"
+                    style={{ color: "#345A9E" }}
+                  >
+                    {member.specialization}
+                  </p>
+
+                  {/* Photo at bottom center - no visible container */}
+                  <div className="flex justify-center">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-40 h-48 object-contain rounded"
+                      style={{ backgroundColor: "transparent" }}
+                    />
                   </div>
                 </div>
               ))}
@@ -190,7 +319,11 @@ export default function Team() {
             <div className="hidden md:flex bg-white rounded-lg shadow-lg max-w-2xl w-full max-h-[80vh]">
               {/* Left side - Photo and contact info */}
               <div className="flex-shrink-0 w-64 p-6 border-r border-gray-200">
-                <div className="w-48 h-64 bg-gray-300 rounded mb-6 mx-auto"></div>
+                <img
+                  src={selectedMember.image}
+                  alt={selectedMember.name}
+                  className="w-48 h-64 object-cover rounded mb-6 mx-auto"
+                />
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
                     <span>📧</span>
@@ -219,24 +352,33 @@ export default function Team() {
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
                   <div className="relative overflow-hidden">
-                    <div className="overflow-y-auto max-h-80 scrollbar-hide" id="career-scroll-desktop">
+                    <div
+                      className="overflow-y-auto max-h-80 scrollbar-hide"
+                      id="career-scroll-desktop"
+                    >
                       <div className="space-y-2 pr-2">
                         {selectedMember.career.map((item, index) => (
-                          <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                          <p
+                            key={index}
+                            className="text-gray-700 text-sm leading-relaxed"
+                          >
                             {item}
                           </p>
                         ))}
                       </div>
                     </div>
                     {/* 스크롤 그라데이션 */}
-                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-gradient-desktop"></div>
+                    <div
+                      className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300"
+                      id="scroll-gradient-desktop"
+                    ></div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Mobile Layout */}
-            <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] flex flex-col overflow-hidden">
+            {/* Mobile Layout - Now with full modal scroll */}
+            <div className="md:hidden bg-white rounded-lg shadow-lg w-full max-w-sm h-[85vh] overflow-y-auto">
               {/* Header with close button */}
               <div className="flex justify-end p-4 pb-2">
                 <button
@@ -249,7 +391,11 @@ export default function Team() {
 
               {/* Photo section */}
               <div className="px-6 pb-4">
-                <div className="w-full h-48 bg-gray-300 rounded"></div>
+                <img
+                  src={selectedMember.image}
+                  alt={selectedMember.name}
+                  className="w-full h-56 object-contain rounded bg-white"
+                />
               </div>
 
               {/* Email section */}
@@ -267,24 +413,23 @@ export default function Team() {
                 <h2 className="text-lg font-bold text-gray-900 mb-1">
                   {selectedMember.name}
                 </h2>
-                <p className="text-gray-600 text-sm">{selectedMember.position}</p>
+                <p className="text-gray-600 text-sm">
+                  {selectedMember.position}
+                </p>
               </div>
 
-              {/* Career section with scroll */}
-              <div className="flex-1 px-6 pb-6 flex flex-col overflow-hidden">
+              {/* Career section - simplified for full modal scroll */}
+              <div className="px-6 pb-6">
                 <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
-                <div className="relative flex-1 overflow-hidden">
-                  <div className="overflow-y-auto h-full scrollbar-hide" id="career-scroll-mobile">
-                    <div className="space-y-2 pb-2">
-                      {selectedMember.career.map((item, index) => (
-                        <p key={index} className="text-gray-700 text-sm leading-relaxed">
-                          {item}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                  {/* 스크롤 그라데이�� */}
-                  <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-gradient-mobile"></div>
+                <div className="space-y-2">
+                  {selectedMember.career.map((item, index) => (
+                    <p
+                      key={index}
+                      className="text-gray-700 text-sm leading-relaxed"
+                    >
+                      {item}
+                    </p>
+                  ))}
                 </div>
               </div>
             </div>

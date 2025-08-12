@@ -114,15 +114,19 @@ export default function Index() {
           <div className="max-w-2xl mx-auto">
             {/* Frame with content from uploaded image */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
-              <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-2 text-center">
-                전문가 그룹이 고객의 상황에 맞는
-              </p>
-              <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-6 md:mb-8 text-center">
-                <span className="text-lg md:text-xl text-[#3C6ADD] font-bold italic">
-                  &quot;개인별 최적화된 세무 솔루션&quot;
-                </span>
-                을 제공합니다.
-              </p>
+              <div className="text-center">
+                <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-2">
+                  전문가 그룹이 고객의 상황에 맞는
+                </p>
+                <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-2">
+                  <span className="text-lg md:text-xl text-[#3C6ADD] font-bold italic">
+                    &quot; 개인별 최적화된 세무 솔루션 &quot;
+                  </span>
+                </p>
+                <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-6 md:mb-8">
+                  을 제공합니다.
+                </p>
+              </div>
               <div className="text-center">
                 <Link
                   to="/team"
@@ -188,7 +192,7 @@ export default function Index() {
                 <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
                   전화 상담
                 </h4>
-                <p className="text-xl md:text-2xl font-bold text-[#7BB0E3] mb-2">
+                <p className="text-xl md:text-2xl font-bold text-[#3d6bdd] mb-2">
                   02-563-2505
                 </p>
                 <p className="text-sm md:text-base text-gray-600">
@@ -204,7 +208,7 @@ export default function Index() {
                 </p>
                 <Link
                   to="/directions"
-                  className="text-sm md:text-base text-[#7BB0E3] hover:text-[#5A9BD4] font-semibold"
+                  className="text-sm md:text-base text-[#3d6bdd] hover:text-[#2952cc] font-semibold"
                 >
                   오시는 길 보기 →
                 </Link>
