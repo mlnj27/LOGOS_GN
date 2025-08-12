@@ -10,7 +10,7 @@ export default function Index() {
     "상속, 증여, 양도 신고",
     "경정청구(환급)",
     "조세불복",
-    "세무컨��팅",
+    "세무컨설팅",
     "세무조사 수임",
   ];
 
@@ -189,7 +189,7 @@ export default function Index() {
             </p>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <div className="bg-white p-6 md:p-10 rounded-xl shadow-sm border border-[#7BB0E3]/30">
-                <h4 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
+                <h4 className="text-xl md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
                   전화 상담
                 </h4>
                 <p className="text-xl md:text-2xl font-bold text-[#3d6bdd] mb-2">
