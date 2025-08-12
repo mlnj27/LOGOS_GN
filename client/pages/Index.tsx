@@ -8,7 +8,7 @@ export default function Index() {
   const services = [
     "세금신고업무",
     "상속, 증여, 양도 신고",
-    "경정청구(��급)",
+    "경정청구(환급)",
     "조세불복",
     "세무컨설팅",
     "세무조사 수임",
@@ -115,7 +115,7 @@ export default function Index() {
             {/* Frame with content from uploaded image */}
             <div className="bg-white border border-gray-200 rounded-xl p-6 md:p-10 shadow-sm">
               <div className="text-center">
-                <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-2">
+                <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
                   전문가 그룹이 고객의 상황에 맞는
                 </p>
                 <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-2">
@@ -148,7 +148,7 @@ export default function Index() {
               담당 업무
             </h3>
             <p className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제���하고 있습니다.
+              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
             </p>
           </div>
 
