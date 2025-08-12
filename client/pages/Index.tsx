@@ -10,7 +10,7 @@ export default function Index() {
     "상속, 증여, 양도 신고",
     "경정청구(환급)",
     "조세불복",
-    "세무컨설팅",
+    "세무컨��팅",
     "세무조사 수임",
   ];
 
@@ -148,7 +148,7 @@ export default function Index() {
               담당 업무
             </h3>
             <p className="text-lg md:text-lg text-gray-600 max-w-2xl mx-auto">
-              이 모든 업무를 세무법인 로고스 강남에서 제공��고 있습니다.
+              이 모든 업무를 세무법인 로고스 강남에서 제공하고 있습니다.
             </p>
           </div>
 
@@ -184,7 +184,7 @@ export default function Index() {
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 md:mb-8">
               상담 문의
             </h3>
-            <p className="text-sm md:text-lg text-gray-600 mb-8 md:mb-12">
+            <p className="text-lg md:text-lg text-gray-600 mb-8 md:mb-12">
               세무 관련 문의사항이 있으시면 언제든지 연락해 주세요.
             </p>
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
