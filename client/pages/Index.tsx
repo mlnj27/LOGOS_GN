@@ -192,7 +192,7 @@ export default function Index() {
                 <h4 className="text-xl md:text-xl font-semibold text-gray-900 mb-3 md:mb-4">
                   전화 상담
                 </h4>
-                <p className="text-xl md:text-2xl font-bold text-[#3d6bdd] mb-2">
+                <p className="text-2xl md:text-2xl font-bold text-[#3d6bdd] mb-2">
                   02-563-2505
                 </p>
                 <p className="text-sm md:text-base text-gray-600">
