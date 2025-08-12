@@ -40,7 +40,7 @@ export default function Index() {
                   style={{ transitionDelay: "200ms" }}
                 >
                   <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-xs md:text-sm lg:text-2xl">
+                    <span className="text-white font-bold text-base md:text-sm lg:text-2xl">
                       최선
                     </span>
                   </div>
@@ -66,7 +66,7 @@ export default function Index() {
                   style={{ transitionDelay: "600ms" }}
                 >
                   <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-xs md:text-sm lg:text-2xl">
+                    <span className="text-white font-bold text-base md:text-sm lg:text-2xl">
                       최적
                     </span>
                   </div>
@@ -92,7 +92,7 @@ export default function Index() {
                   style={{ transitionDelay: "1000ms" }}
                 >
                   <div className="w-14 h-14 md:w-20 md:h-20 lg:w-32 lg:h-32 bg-[#7BB0E3] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300">
-                    <span className="text-white font-bold text-xs md:text-sm lg:text-2xl">
+                    <span className="text-white font-bold text-base md:text-sm lg:text-2xl">
                       최상
                     </span>
                   </div>
