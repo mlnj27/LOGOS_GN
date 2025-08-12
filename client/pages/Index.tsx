@@ -118,7 +118,7 @@ export default function Index() {
                 <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
                   전문가 그룹이 고객의 상황에 맞는
                 </p>
-                <p className="text-xs md:text-sm lg:text-lg text-gray-700 mb-2">
+                <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
                   <span className="text-lg md:text-xl text-[#3C6ADD] font-bold italic">
                     &quot; 개인별 최적화된 세무 솔루션 &quot;
                   </span>
