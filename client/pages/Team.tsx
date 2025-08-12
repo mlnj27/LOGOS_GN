@@ -17,7 +17,8 @@ const teamMembers: TeamMember[] = [
     name: "윤 영 호",
     position: "대표이사 / 세무사",
     specialization: "세무조사, 재산세 (양도, 증여, 상속), 법인세 분야 전문가",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 32년 근무",
       "반포재산, 도봉법인, 북전주조사과장",
@@ -39,15 +40,16 @@ const teamMembers: TeamMember[] = [
       "서울청 1국, 조사 3국",
       "역삼조사, 삼성법인, 강남재산",
       "금천·성동조사",
-      "서울청 부과세과 팀장 등"
-    ]
+      "서울청 부과세과 팀장 등",
+    ],
   },
   {
     id: "lee",
     name: "이 영 섭",
     position: "고 문",
     specialization: "기업 컸설팅, M&A 분야 전문가",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "스닥상장사 대한뉴팜(주) 대표이사",
       "한국철도공사(코레일) 경영평가위원",
@@ -72,24 +74,25 @@ const teamMembers: TeamMember[] = [
       "MBC 전략정보경영시스템 도입을 위한 진단",
       "삼성전자 가전본부 고문",
       "LG전자 가전본부 원가���리",
-      "SK Chemical 지식경영시스템"
-    ]
+      "SK Chemical 지식경영시스템",
+    ],
   },
   {
     id: "noh",
     name: "노 현 철",
     position: "이 사",
     specialization: "소득세, ���가세, 재산세 전문가",
-    image: "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
+    image:
+      "https://cdn.builder.io/api/v1/image/assets%2Faefe9eccf09446e998a16c0318d70c3f%2F91fa1cf5b0914bb095b18283f6d67553?format=webp&width=800",
     career: [
       "국세청 15년 근무",
       "분�� 법인 의정부 재산 등",
       "국세청 15년 근무",
       "분당 법인 의정부 재산 등",
       "국세청 15년 근무",
-      "분당 법인 의정부 재산 등"
-    ]
-  }
+      "분당 법인 의정부 재산 등",
+    ],
+  },
 ];
 
 export default function Team() {
@@ -98,45 +101,50 @@ export default function Team() {
   // 모달 열릴 때 배경 스크롤 방지
   useEffect(() => {
     if (selectedMember) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [selectedMember]);
 
   // 스크롤 그라데이션 효과 제어 (데스크톱만)
   useEffect(() => {
     if (selectedMember) {
-      const checkScrollable = (scrollContainerId: string, gradientId: string) => {
+      const checkScrollable = (
+        scrollContainerId: string,
+        gradientId: string,
+      ) => {
         const scrollContainer = document.getElementById(scrollContainerId);
         const gradient = document.getElementById(gradientId);
 
         if (scrollContainer && gradient) {
-          const isScrollable = scrollContainer.scrollHeight > scrollContainer.clientHeight;
+          const isScrollable =
+            scrollContainer.scrollHeight > scrollContainer.clientHeight;
 
           if (isScrollable) {
-            gradient.style.opacity = '1';
+            gradient.style.opacity = "1";
 
             const handleScroll = () => {
               const { scrollTop, scrollHeight, clientHeight } = scrollContainer;
               const isAtBottom = scrollTop + clientHeight >= scrollHeight - 10;
-              gradient.style.opacity = isAtBottom ? '0' : '1';
+              gradient.style.opacity = isAtBottom ? "0" : "1";
             };
 
-            scrollContainer.addEventListener('scroll', handleScroll);
-            return () => scrollContainer.removeEventListener('scroll', handleScroll);
+            scrollContainer.addEventListener("scroll", handleScroll);
+            return () =>
+              scrollContainer.removeEventListener("scroll", handleScroll);
           } else {
-            gradient.style.opacity = '0';
+            gradient.style.opacity = "0";
           }
         }
       };
 
       const timeoutId = setTimeout(() => {
-        checkScrollable('career-scroll-desktop', 'scroll-gradient-desktop');
+        checkScrollable("career-scroll-desktop", "scroll-gradient-desktop");
       }, 100);
 
       return () => clearTimeout(timeoutId);
@@ -175,12 +183,15 @@ export default function Team() {
                       </h3>
 
                       {/* Position */}
-                      <p className="text-xs mb-3" style={{color: '#703B1F'}}>
+                      <p className="text-xs mb-3" style={{ color: "#703B1F" }}>
                         {member.position}
                       </p>
 
                       {/* Specialization */}
-                      <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
+                      <p
+                        className="text-xs leading-relaxed"
+                        style={{ color: "#345A9E" }}
+                      >
                         {member.specialization}
                       </p>
                     </div>
@@ -222,12 +233,15 @@ export default function Team() {
                       </h3>
 
                       {/* Position */}
-                      <p className="text-xs mb-3" style={{color: '#703B1F'}}>
+                      <p className="text-xs mb-3" style={{ color: "#703B1F" }}>
                         {member.position}
                       </p>
 
                       {/* Specialization */}
-                      <p className="text-xs leading-relaxed" style={{color: '#345A9E'}}>
+                      <p
+                        className="text-xs leading-relaxed"
+                        style={{ color: "#345A9E" }}
+                      >
                         {member.specialization}
                       </p>
                     </div>
@@ -268,12 +282,18 @@ export default function Team() {
                   </h3>
 
                   {/* Position - #703B1F color */}
-                  <p className="text-sm mb-3 text-left" style={{color: '#703B1F'}}>
+                  <p
+                    className="text-sm mb-3 text-left"
+                    style={{ color: "#703B1F" }}
+                  >
                     {member.position}
                   </p>
 
                   {/* Specialization - #345A9E color */}
-                  <p className="text-sm mb-6 text-left leading-relaxed" style={{color: '#345A9E'}}>
+                  <p
+                    className="text-sm mb-6 text-left leading-relaxed"
+                    style={{ color: "#345A9E" }}
+                  >
                     {member.specialization}
                   </p>
 
@@ -283,7 +303,7 @@ export default function Team() {
                       src={member.image}
                       alt={member.name}
                       className="w-40 h-48 object-contain rounded"
-                      style={{backgroundColor: 'transparent'}}
+                      style={{ backgroundColor: "transparent" }}
                     />
                   </div>
                 </div>
@@ -332,17 +352,26 @@ export default function Team() {
                 <div className="flex-1">
                   <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
                   <div className="relative overflow-hidden">
-                    <div className="overflow-y-auto max-h-80 scrollbar-hide" id="career-scroll-desktop">
+                    <div
+                      className="overflow-y-auto max-h-80 scrollbar-hide"
+                      id="career-scroll-desktop"
+                    >
                       <div className="space-y-2 pr-2">
                         {selectedMember.career.map((item, index) => (
-                          <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                          <p
+                            key={index}
+                            className="text-gray-700 text-sm leading-relaxed"
+                          >
                             {item}
                           </p>
                         ))}
                       </div>
                     </div>
                     {/* 스크롤 그라데이션 */}
-                    <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-gradient-desktop"></div>
+                    <div
+                      className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-0 transition-opacity duration-300"
+                      id="scroll-gradient-desktop"
+                    ></div>
                   </div>
                 </div>
               </div>
@@ -384,7 +413,9 @@ export default function Team() {
                 <h2 className="text-lg font-bold text-gray-900 mb-1">
                   {selectedMember.name}
                 </h2>
-                <p className="text-gray-600 text-sm">{selectedMember.position}</p>
+                <p className="text-gray-600 text-sm">
+                  {selectedMember.position}
+                </p>
               </div>
 
               {/* Career section - simplified for full modal scroll */}
@@ -392,7 +423,10 @@ export default function Team() {
                 <h3 className="font-bold text-gray-900 mb-4">경력사항</h3>
                 <div className="space-y-2">
                   {selectedMember.career.map((item, index) => (
-                    <p key={index} className="text-gray-700 text-sm leading-relaxed">
+                    <p
+                      key={index}
+                      className="text-gray-700 text-sm leading-relaxed"
+                    >
                       {item}
                     </p>
                   ))}
