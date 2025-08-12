@@ -120,7 +120,7 @@ export default function Index() {
                 </p>
                 <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-2">
                   <span className="text-lg md:text-xl text-[#3C6ADD] font-bold italic">
-                    &quot; 개인별 최적화된 세무 솔루션 &quot;
+                    &quot; 개인별 ���적화된 세무 솔루션 &quot;
                   </span>
                 </p>
                 <p className="text-base md:text-sm lg:text-lg text-gray-700 mb-6 md:mb-8">
@@ -195,7 +195,7 @@ export default function Index() {
                 <p className="text-2xl md:text-2xl font-bold text-[#3d6bdd] mb-2">
                   02-563-2505
                 </p>
-                <p className="text-sm md:text-base text-gray-600">
+                <p className="text-lg md:text-base text-gray-600">
                   평일 9:00 - 18:00
                 </p>
               </div>
